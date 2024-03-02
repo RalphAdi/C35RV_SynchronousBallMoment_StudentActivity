@@ -35,7 +35,10 @@ function draw(){
 }
 
 function writePosition(x,y){
-  
+  database.ref('ball/position').set({
+    'x': position.x + x ,
+    'y': position.y + y
+  })
 }
 
 function readPosition(data){
